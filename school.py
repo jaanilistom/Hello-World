@@ -31,6 +31,10 @@ class Subject:
         self.language = language
         self.teacher = teacher
 
+class Coordinator(Person):
+    def __init__(self, name, age, *extra_args):
+        super().__init__(name, age, *extra_args)
+
 
 student_1 = Student("Jaan", 29, "EE9", "jaanilistom@gmail.com", "Estonian", "male", "loyalty")
 # print(student_1.group_name)
@@ -41,5 +45,8 @@ student_1 = Student("Jaan", 29, "EE9", "jaanilistom@gmail.com", "Estonian", "mal
 # print(student_1.character)
 
 subject1 = Subject("TDD", "8H", "english", "Komolafe")
-print(subject1.language)
-print(subject1.duration)
+#print(subject1.language)
+#print(subject1.duration)
+
+coordinator1 = Coordinator("Salome", 30, "spain", "female", "cheerful" )
+print(coordinator1.character)
